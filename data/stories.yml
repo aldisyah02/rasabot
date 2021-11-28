@@ -1,0 +1,223 @@
+version: "2.0"
+
+stories:
+- story: tanya huruf vokal
+  steps:
+  - intent: tanya_vokal
+  - action: action_tanya_vokal
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: sapa
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: menu awal
+  steps:
+  - checkpoint: checkpoint_menuawal
+  - intent: menu
+  - action: utter_menu
+
+- story: setuju
+  steps:
+  - checkpoint: affirm_checkpoint
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_ulang
+  - checkpoint: checkpoint_menuawal
+
+- story: tidak setuju
+  steps:
+  - checkpoint: affirm_checkpoint
+  - intent: not_affirm
+  - action: utter_goodbye
+
+- story: jumlah huruf abjad
+  steps:
+  - intent: lineA
+  - action: utter_lineA
+  - intent: t_jumlah_hurufabjad
+  - action: utter_t_jumlah_hurufabjad
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: jumlah huruf abjad kapital
+  steps:
+  - intent: lineA
+  - action: utter_lineA
+  - intent: t_hurufabjad_kapital
+  - action: utter_t_jumlah_hurufabjad_kapital
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: jumlah huruf abjad non kapital
+  steps:
+  - intent: lineA
+  - action: utter_lineA
+  - intent: t_hurufabjad_nonkapital
+  - action: utter_t_jumlah_hurufabjad_nonkapital
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: jumlah huruf vokal
+  steps:
+  - intent: lineB
+  - action: utter_lineB
+  - intent: t_jumlah_hurufvokal
+  - action: utter_t_jumlah_hurufvokal
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: pemakaian huruf vokal
+  steps:
+  - intent: lineB
+  - action: utter_lineB
+  - intent: t_pemakaian_hurufvokal
+  - action: utter_t_pemakaian_hurufvokal
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: jumlah huruf konsonan
+  steps:
+  - intent: lineC
+  - action: utter_lineC
+  - intent: t_jumlah_hurufkonsonan
+  - action: utter_t_jumlah_hurufkonsonan
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: pemakaian huruf konsonan
+  steps:
+  - intent: lineC
+  - action: utter_lineC
+  - intent: t_pemakaian_hurufkonsonan
+  - action: utter_t_pemakaian_hurufkonsonan
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: jumlah huruf diftong
+  steps:
+  - intent: lineD
+  - action: utter_lineD
+  - intent: t_jumlah_hurufdiftong
+  - action: utter_t_jumlah_hurufdiftong
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: pemakaian huruf diftong
+  steps:
+  - intent: lineD
+  - action: utter_lineD
+  - intent: t_pemakaian_hurufdiftong
+  - action: utter_t_pemakaian_hurufdiftong
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: jumlah gabungan huruf konsonan
+  steps:
+  - intent: lineE
+  - action: utter_lineE
+  - intent: t_jumlah_gabungan_hurufkonsonan
+  - action: utter_t_jumlah_gabungan_hurufkonsonan
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: pemakaian gabungan huruf konsonan
+  steps:
+  - intent: lineE
+  - action: utter_lineE
+  - intent: t_pemakaian_gabungan_hurufkonsonan
+  - action: utter_t_pemakaian_gabungan_hurufkonsonan
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: pemakaian huruf gabungan konsonan
+  steps:
+  - intent: lineE
+  - action: utter_lineE
+  - intent: t_pemakaian_gabungan_hurufkonsonan
+  - action: utter_t_pemakaian_gabungan_hurufkonsonan
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - awal kalimat
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: t_hurufkapital_awalkalimat
+  - action: utter_t_hurufkapital_awalkalimat
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - nama orang
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_namaorang
+  - action: utter_t_hurufkapital_namaorang
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - petikan langsung
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_petikanlangsung
+  - action: utter_t_hurufkapital_petikanlangsung
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - gelar
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_gelar
+  - action: utter_t_hurufkapital_gelar
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital jabatan
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_jabatan
+  - action: utter_t_hurufkapital_jabatan
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - tahun bulan hari
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_tahunbulanhari
+  - action: utter_t_hurufkapital_tahunbulanhari
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - geografi
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_geografi
+  - action: utter_t_hurufkapital_geografi
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - peristiwa sejarah
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t hurufkapital_peristiwasejarah
+  - action: utter_t_hurufkapital_peristiwasejarah
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint
+
+- story: huruf kapital - judul
+  steps:
+  - intent: lineF
+  - action: utter_lineF
+  - intent: i_t_hurufkapital_judul
+  - action: utter_t_hurufkapital_judul
+  - action: utter_konfirmasi
+  - checkpoint: affirm_checkpoint

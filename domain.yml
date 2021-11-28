@@ -1,0 +1,228 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- menu:
+    use_entities: true
+- lineA:
+    use_entities: true
+- lineB:
+    use_entities: true
+- lineC:
+    use_entities: true
+- lineD:
+    use_entities: true
+- lineE:
+    use_entities: true
+- lineF:
+    use_entities: true
+- t_jumlah_hurufabjad:
+    use_entities: true
+- t_hurufabjad_kapital:
+    use_entities: true
+- t_hurufabjad_nonkapital:
+    use_entities: true
+- t_jumlah_hurufvokal:
+    use_entities: true
+- t_pemakaian_hurufvokal:
+    use_entities: true
+- t_jumlah_hurufkonsonan:
+    use_entities: true
+- t_pemakaian_hurufkonsonan:
+    use_entities: true
+- t_jumlah_hurufdiftong:
+    use_entities: true
+- t_pemakaian_hurufdiftong:
+    use_entities: true
+- t_jumlah_gabungan_hurufkonsonan:
+    use_entities: true
+- t_pemakaian_gabungan_hurufkonsonan:
+    use_entities: true
+- t_hurufkapital_awalkalimat:
+    use_entities: true
+- i_t_hurufkapital_namaorang:
+    use_entities: true
+- i_t_hurufkapital_petikanlangsung:
+    use_entities: true
+- i_t_hurufkapital_gelar:
+    use_entities: true
+- i_t_hurufkapital_jabatan:
+    use_entities: true
+- i_t_hurufkapital_tahunbulanhari:
+    use_entities: true
+- i_t_hurufkapital_geografi:
+    use_entities: true
+- i_t hurufkapital_peristiwasejarah:
+    use_entities: true
+- i_t_hurufkapital_judul:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- not_affirm:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- tanya_vokal:
+    use_entities: true
+entities:
+- vokal
+slots:
+  vokal:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hai ! klik 'menu' untuk mengakses pertanyaan kamu yaa
+  utter_menu:
+  - buttons:
+    - payload: /lineA
+      title: Huruf Abjad
+    - payload: /lineB
+      title: Huruf Vokal
+    - payload: /lineC
+      title: Huruf Konsonan
+    - payload: /lineD
+      title: Huruf Diftong
+    - payload: /lineE
+      title: Gabungan Huruf Konsonan
+    - payload: /lineF
+      title: Huruf Kapital
+    text: |
+      Hai aku bot kelompok 1, Apa yang ingin anda tanyakan?
+  utter_lineA:
+  - buttons:
+    - payload: /t_jumlah_hurufabjad
+      title: Jumlah Huruf Abjad
+    - payload: /t_hurufabjad_kapital
+      title: Contoh Huruf Abjad Kapital
+    - payload: /t_hurufabjad_nonkapital
+      title: Contoh Huruf Abjad Non Kapital
+    text: |
+      apa yang ingin anda tanyakan tentang Huruf Abjad?
+  utter_lineB:
+  - buttons:
+    - payload: /t_jumlah_hurufvokal
+      title: Jumlah Huruf Vokal
+    - payload: /t_pemakaian_hurufvokal
+      title: Contoh Pemakaian Huruf Vokal
+  - text: |
+      apa yang ingin anda tanyakan tentang Huruf Vokal?
+  utter_lineC:
+  - text: |
+      apa yang ingin anda tanyakan tentang Huruf Konsonan?
+  - buttons:
+    - payload: /t_jumlah_hurufkonsonan
+      title: Jumlah Huruf Konsonan
+    - payload: /t_pemakaian_hurufkonsonan
+      title: Contoh Pemakaian Huruf Konsonan
+  utter_lineD:
+  - text: |
+      apa yang ingin anda tanyakan tentang Huruf Diftong?
+  - buttons:
+    - payload: /t_jumlah_hurufdiftong
+      title: Jumlah Huruf Diftong
+    - payload: /t_pemakaian_hurufdiftong
+      title: Contoh Pemakaian Huruf Diftong
+  utter_lineE:
+  - text: |
+      apa yang ingin anda tanyakan tentang Gabungan Huruf Konsonan?
+  - buttons:
+    - payload: /t_jumlah_gabungan_hurufkonsonan
+      title: Jumlah Huruf Gabungan Huruf Konsonan
+    - payload: /t_pemakaian_gabungan_hurufkonsonan
+      title: Contoh Pemakaian Huruf Gabungan Huruf Konsonan
+  utter_lineF:
+  - text: |-
+      apa yang ingin anda tanyakan tentang Huruf Kapital?
+       1. Kapital Awal Kalimat
+       2. Kapital Nama Orang
+       3. Kapital Petikan Langsung
+       4. Kapital Gelar
+       5. Kapital Jabatan
+       6. Kapital Tahun, Bulan, Hari
+       7. Kapital Geografi
+       8. Kapital Peristiwa Sejarah
+       9. Kapital Judul
+  utter_t_jumlah_hurufabjad:
+  - text: Terima kasih atas pertanyannya. Untuk huruf abjad yang dipakai dalam ejaan bahasa Indonesia berjumlah 26 huruf.
+  utter_t_jumlah_hurufabjad_kapital:
+  - text: |-
+      Terima kasih atas pertanyannya. Untuk huruf kapital yang dipakai dalam ejaan bahasa Indonesia adalah sebagai berikut: 
+       A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+  utter_t_jumlah_hurufabjad_nonkapital:
+  - text: |-
+      Terima kasih atas pertanyannya. Untuk huruf non kapital yang dipakai dalam ejaan bahasa Indonesia adalah sebagai berikut:
+       a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z.
+  utter_t_jumlah_hurufvokal:
+  - text: 'Terima kasih atas pertanyannya. Untuk huruf vokal yang dipakai dalam ejaan bahasa Indonesia berjumlah 5 huruf, yaitu: a, e, i, o, dan u.'
+  utter_t_pemakaian_hurufvokal:
+  - text: 'Terima kasih atas pertanyannya. Untuk pemakaian huruf vokal dalam kata berada pada posisi awal, posisi tengah, dan posisi akhir. Sebagai contoh huruf vocal “a” pada posisi awal: api, arus.'
+  utter_t_jumlah_hurufkonsonan:
+  - text: Terima kasih atas pertanyannya. Untuk huruf konsonan yang dipakai dalam ejaan bahasa Indonesia berjumlah 21 huruf.
+  utter_t_pemakaian_hurufkonsonan:
+  - text: 'Terima kasih atas pertanyannya. Untuk pemakaian huruf konsonan dalam kata berada pada posisi awal, posisi tengah, dan posisi akhir. Contoh huruf konsonan “b” pada posisi tengah: sebut, tabah.'
+  utter_t_jumlah_hurufdiftong:
+  - text: Di dalam bahasa Indonesia terdapat 4 huruf diftong yang dilambangkan dengan gabungan huruf vocal ai, au, ei, dan oi.
+  utter_t_pemakaian_hurufdiftong:
+  - text: 'Untuk pemakaian huruf diftong dalam kata berada pada posisi awal, posisi tengah, dan posisi akhir. Contoh huruf diftong “ai” pada posisi akhir: pandai, lalai.'
+  utter_t_jumlah_gabungan_hurufkonsonan:
+  - text: Di dalam Bahasa Indonesia terdapat 4 gabungan huruf konsonan yaitu kh, ng, ny, dan sy, yang masing-masing melambangkan satu bunyi konsonan.
+  utter_t_pemakaian_gabungan_hurufkonsonan:
+  - text: 'Untuk pemakaian gabungan huruf konsonan dalam kata berada pada posisi awal, posisi tengah, dan posisi akhir. Sebagai contoh gabungan huruf konsonan “kh” pada posisi awal: khusus, khas.'
+  utter_t_hurufkapital_awalkalimat:
+  - text: 'Huruf kapital dipakai sebagai huruf pertama awal kalimat. Contohnya: Dia membaca buku.'
+  utter_t_hurufkapital_namaorang:
+  - text: 'Huruf kapital dipakai sebagai huruf pertama unsur nama orang, termasuk julukan. Contohnya: Dewi Sartika.'
+  utter_t_hurufkapital_petikanlangsung:
+  - text: 'Huruf kapital dipakai pada awal kalimat dalam petikan langsung. Contohnya: Adik bertanya, “Kapan kita pulang?'
+  utter_t_hurufkapital_gelar:
+  - text: 'Huruf kapital dipakai sebagai huruf pertama unsur nama gelar kehormatan, keturunan, keagamaan, atau akademik yang diikuti nama orang. Contohnya: Sultan Hasanuddin.'
+  utter_t_hurufkapital_jabatan:
+  - text: 'Huruf kapital dipakai sebagai huruf pertama unsur nama jabatan dan pangkat yang diikuti nama orang, nama instansi, atau nama tempat. Contohnya: Wakil Presiden Adam Malik.'
+  utter_t_hurufkapital_tahunbulanhari:
+  - text: 'Huruf kapital dipakai sebagai huruf pertama nama tahun, bulan, hari, dan hari besar atau hari raya. Contohnya: tahun Hijriah.'
+  utter_t_hurufkapital_geografi:
+  - text: |-
+      Huruf kapital dipakai sebagai huruf pertama nama geografi. Contohnya: Asia Tenggara.
+       Catatan:
+       1. pertama nama geografi yang bukan nama diri tidak ditulis dengan huruf kapital.
+       2. pertama nama georafi yang dipakai sebaga nama jenis tidak ditulus dengan huruf kapiral
+  utter_t_hurufkapital_peristiwasejarah:
+  - text: |-
+      Huruf kapital dipakai sebagai huruf pertama unsur nama peristiwa sejarah. Contohnya: Perang Dunia II.
+       Catatan:
+       Huruf pertama peristiwa sejarah yang tidak dipakai sebagai nama tidak ditulis dengan huruf kapital.
+  utter_t_hurufkapital_judul:
+  - text: 'Huruf kapital dipakai sebagai huruf pertama setiap kata di dalam judul buku, karangan, artikel, dan makalah. Contohnya: Tulisan itu dimuat dalam majalah Bahasa dan Sastra.'
+  utter_konfirmasi:
+  - text: Apakah jawaban ini membantu kamu ?
+  utter_goodbye:
+  - text: bye bye
+  - text: see you later
+  - text: goodbye
+  - text: cee you later
+  - text: ciao
+  - text: have a nice day
+  utter_ulang:
+  - text: klik 'menu' lagi jika ingin bertanya ulang !
+  utter_happy:
+  - text: Aku senang ini membantu kamu !
+  - text: Jika membantu , silahkan tanya lagi ya !
+  utter_iamabot:
+  - text: YA ! Saya adalah BOT yang diciptakan oleh kelompok 1 ! ^_^V
+  - text: Kalau iya memang kenapa ?
+actions:
+- action_tanya_vokal
+forms: {}
+e2e_actions: []

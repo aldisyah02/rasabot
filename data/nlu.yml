@@ -1,0 +1,217 @@
+version: "2.0"
+nlu:
+- intent: menu
+  examples: |
+    - menu
+    - pilihan
+    - mnu
+    - mn
+- intent: tanya_vokal
+  examples: |
+    - apakah huruf [a](vokal) itu huruf vokal ?
+    - apakah huruf [i](vokal) itu huruf vokal ?
+    - apakah huruf [u](vokal) itu huruf vokal ?
+    - apakah huruf [e](vokal) itu huruf vokal ?
+    - apakah huruf [o](vokal) itu huruf vokal ?
+- intent: lineA
+  examples: |
+    - a
+    - huruf abjad
+- intent: lineB
+  examples: |
+    - huruf vokal
+    - b
+- intent: lineC
+  examples: |
+    - c
+    - huruf konsonan
+- intent: lineD
+  examples: |
+    - d
+    - huruf diftong
+- intent: lineE
+  examples: |
+    - e
+    - gabungan huruf konsonan
+- intent: lineF
+  examples: |
+    - f
+    - huruf kapital
+- intent: t_jumlah_hurufabjad
+  examples: |
+    - jumlah abjad
+- intent: t_hurufabjad_kapital
+  examples: |
+    - jumlah kapital
+    - jumlah huruf besar
+- intent: t_hurufabjad_nonkapital
+  examples: |
+    - jumlah nonkapital
+    - non kapital
+    - kecil
+    - huruf kecil
+- intent: t_jumlah_hurufvokal
+  examples: |
+    - jumlah vokal
+    - jumlah huruf vokal
+    - berapa vokal
+- intent: t_pemakaian_hurufvokal
+  examples: |
+    - pemakaian huruf vokal
+    - pemakaian vokal
+    - penggunaan vokal
+- intent: t_jumlah_hurufkonsonan
+  examples: |
+    - jumlah konsonan
+    - berapa
+- intent: t_pemakaian_hurufkonsonan
+  examples: |
+    - pemakaian huruf konsonan
+    - penggunaan konsonan
+    - contoh konsonan
+- intent: t_jumlah_hurufdiftong
+  examples: |
+    - jumlah huruf diftong
+    - berapa diftong
+    - jumlah diftong
+- intent: t_pemakaian_hurufdiftong
+  examples: |
+    - contoh huruf diftong
+    - pemakaian huruf diftong
+    - pemakaian diftong
+    - penggunaan diftong
+- intent: t_jumlah_gabungan_hurufkonsonan
+  examples: |
+    - jumlah gabungan huruf konsonan
+    - berapa konsonan
+    - gabungan jumlah
+- intent: t_pemakaian_gabungan_hurufkonsonan
+  examples: |
+    - pemakaian gabungan huruf konsonan
+    - pemakaian gabungan konsonan
+- intent: t_hurufkapital_awalkalimat
+  examples: |
+    - apa itu huruf kapital
+    - kapital nama awal kalimat
+    - awal kalimat
+    - awal
+- intent: i_t_hurufkapital_namaorang
+  examples: |
+    - huruf kapital nama orang
+    - nama orang
+    - kapital orang
+    - kapital nama orang
+- intent: i_t_hurufkapital_petikanlangsung
+  examples: |
+    - huruf kapital petikan langsung
+    - petikan langsung
+    - kapital petikan langsung
+- intent: i_t_hurufkapital_gelar
+  examples: |
+    - huruf kapital nama gelar
+    - gelar
+    - kapital gelar
+    - kapital nama gelar
+- intent: i_t_hurufkapital_jabatan
+  examples: |
+    - contoh huruf kapital nama jabatan
+    - huruf kapital nama jabatan
+    - jabatan
+    - kapital jabatan
+    - kapital nama jabatan
+- intent: i_t_hurufkapital_tahunbulanhari
+  examples: |
+    - contoh huruf kapital tahun bulan hari
+    - huruf kapital tahun bulan hari
+    - tahun bulan hari
+    - kapital tahun
+    - kapital bulan
+    - kapital hari
+    - kapital tahun bulan hari
+- intent: i_t_hurufkapital_geografi
+  examples: |
+    - contoh huruf kapital geografi
+    - huruf kapital geografi
+    - geografi
+    - kapital geografi
+    - kapital nama geografi
+- intent: i_t hurufkapital_peristiwasejarah
+  examples: |
+    - contoh huruf kapital nama peristiwa sejarah
+    - huruf kapital peristiwa sejarah
+    - peristiwa sejarah
+    - sejarah
+    - kapital peristiwa sejarah
+    - kapital nama peristiwa sejarah
+- intent: i_t_hurufkapital_judul
+  examples: |
+    - contoh huruf kapital nama judul
+    - nama judul
+    - judul
+    - kapital judul
+    - kapital nama judul
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hy
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Engga apa apa
+    - Tidak apa apa
+    - Hi
+    - Hallo
+    - hallo
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ya
+- intent: not_affirm
+  examples: |
+    - no
+    - n
+    - tidak
+    - ngga
+    - g
+    - nope
+    - tdk
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - kamu bot ?
+    - kamu siapa ?
+- intent: mood_great
+  examples: |
+    - Aku senang
+    - Senang sekali
+    - Bahagia
