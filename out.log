@@ -1,0 +1,120 @@
+2021-11-29 21:32:07,728 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-11-29 21:32:07,731 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-11-29 21:32:07,732 [DEBUG]  Using the default number of Sanic workers (1).
+2021-11-29 21:32:07,742 [INFO ]  Loading model models\20211129-150439.tar.gz...
+2021-11-29 21:32:08,049 [DEBUG]  Extracted model to 'C:\Users\ADMINI~1\AppData\Local\Temp\tmp_jowdmzd'.
+2021-11-29 21:32:08,072 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-11-29 21:32:09,067 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-11-29 21:32:09,199 [INFO ]  Enabling coroutine debugging. Loop id 1493083946960.
+2021-11-29 21:32:09,202 [INFO ]  Loading model models\20211129-150439.tar.gz...
+2021-11-29 21:32:09,486 [DEBUG]  Extracted model to 'C:\Users\ADMINI~1\AppData\Local\Temp\tmpxixwy_aa'.
+2021-11-29 21:32:09,670 [DEBUG]  Loading the model from C:\Users\ADMINI~1\AppData\Local\Temp\tmpxixwy_aa\nlu\component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-11-29 21:32:09,750 [DEBUG]  Following metrics will be logged during training: 
+2021-11-29 21:32:09,751 [DEBUG]    t_loss (total loss)
+2021-11-29 21:32:09,753 [DEBUG]    i_acc (intent acc)
+2021-11-29 21:32:09,754 [DEBUG]    i_loss (intent loss)
+2021-11-29 21:32:09,755 [DEBUG]    e_f1 (entity f1)
+2021-11-29 21:32:09,756 [DEBUG]    e_loss (entity loss)
+2021-11-29 21:32:53,101 [DEBUG]  Finished loading the model.
+2021-11-29 21:32:53,106 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path 'C:\Users\ADMINI~1\AppData\Local\Temp\tmpxixwy_aa\nlu' doesn't exist?
+2021-11-29 21:32:53,118 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-11-29 21:32:53,120 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-11-29 21:32:53,439 [DEBUG]  Extracted model to 'C:\Users\ADMINI~1\AppData\Local\Temp\tmpgmz_3lzn'.
+2021-11-29 21:32:53,583 [DEBUG]  Loading the model from C:\Users\ADMINI~1\AppData\Local\Temp\tmpgmz_3lzn\core\policy_1_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2021-11-29 21:33:05,253 [DEBUG]  Finished loading the model.
+2021-11-29 21:33:05,264 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-11-29 21:33:05,265 [INFO ]  Rasa server is up and running.
+2021-11-29 21:33:23,913 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=4&transport=polling&t=Nri7LsE'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2021-11-29 21:33:25,232 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=4&transport=polling&t=Nri7MFh'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2021-11-29 21:33:26,763 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=4&transport=polling&t=Nri7Mda'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2021-11-29 21:33:29,910 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 1167, in run
+    serve(**server_settings)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\server.py", line 920, in serve
+    loop.run_forever()
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\base_events.py", line 563, in run_forever
+    self._run_once()
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\base_events.py", line 1808, in _run_once
+    event_list = self._selector.select(timeout)
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\windows_events.py", line 430, in select
+    self._poll(timeout)
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\windows_events.py", line 779, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+  File "c:\programdata\anaconda3\envs\venv\lib\site-packages\socketio\client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2021-11-30 07:26:29,445 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-11-30 07:26:29,457 [INFO ]  Loading model models\20211130-071053.tar.gz...
+2021-11-30 07:26:30,811 [INFO ]  Loading model models\20211130-071053.tar.gz...
+2021-11-30 07:26:59,119 [INFO ]  Rasa server is up and running.
+2021-11-30 07:27:23,341 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\app.py", line 1167, in run
+    serve(**server_settings)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python38\site-packages\sanic\server.py", line 920, in serve
+    loop.run_forever()
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\base_events.py", line 563, in run_forever
+    self._run_once()
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\base_events.py", line 1808, in _run_once
+    event_list = self._selector.select(timeout)
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\windows_events.py", line 430, in select
+    self._poll(timeout)
+  File "c:\programdata\anaconda3\envs\venv\lib\asyncio\windows_events.py", line 779, in _poll
+    status = _overlapped.GetQueuedCompletionStatus(self._iocp, ms)
+KeyboardInterrupt
+2021-11-30 07:27:23,995 [ERROR]  Task was destroyed but it is pending!
+task: <Task pending name='Task-8' coro=<AsyncServer._service_task() done, defined at c:\programdata\anaconda3\envs\venv\lib\site-packages\engineio\asyncio_server.py:482> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000283F6ECCE20>()]>>
+2021-11-30 07:27:23,997 [ERROR]  Task was destroyed but it is pending!
+task: <Task pending name='Task-9' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at c:\programdata\anaconda3\envs\venv\lib\site-packages\engineio\asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000283F6ECCC10>()]>>

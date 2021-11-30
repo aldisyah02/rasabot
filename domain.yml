@@ -116,44 +116,44 @@ responses:
       title: Jumlah Huruf Vokal
     - payload: /t_pemakaian_hurufvokal
       title: Contoh Pemakaian Huruf Vokal
-  - text: |
+    text: |
       apa yang ingin anda tanyakan tentang Huruf Vokal?
   utter_lineC:
-  - text: |
-      apa yang ingin anda tanyakan tentang Huruf Konsonan?
   - buttons:
     - payload: /t_jumlah_hurufkonsonan
       title: Jumlah Huruf Konsonan
     - payload: /t_pemakaian_hurufkonsonan
       title: Contoh Pemakaian Huruf Konsonan
+    text: |
+      apa yang ingin anda tanyakan tentang Huruf Konsonan?
   utter_lineD:
-  - text: |
-      apa yang ingin anda tanyakan tentang Huruf Diftong?
   - buttons:
     - payload: /t_jumlah_hurufdiftong
       title: Jumlah Huruf Diftong
     - payload: /t_pemakaian_hurufdiftong
       title: Contoh Pemakaian Huruf Diftong
+    text: |
+      apa yang ingin anda tanyakan tentang Huruf Diftong?
   utter_lineE:
-  - text: |
-      apa yang ingin anda tanyakan tentang Gabungan Huruf Konsonan?
   - buttons:
     - payload: /t_jumlah_gabungan_hurufkonsonan
       title: Jumlah Huruf Gabungan Huruf Konsonan
     - payload: /t_pemakaian_gabungan_hurufkonsonan
       title: Contoh Pemakaian Huruf Gabungan Huruf Konsonan
+    text: |
+      apa yang ingin anda tanyakan tentang Gabungan Huruf Konsonan?
   utter_lineF:
-  - text: |-
+  - text: |
       apa yang ingin anda tanyakan tentang Huruf Kapital?
-       1. Kapital Awal Kalimat
-       2. Kapital Nama Orang
-       3. Kapital Petikan Langsung
-       4. Kapital Gelar
-       5. Kapital Jabatan
-       6. Kapital Tahun, Bulan, Hari
-       7. Kapital Geografi
-       8. Kapital Peristiwa Sejarah
-       9. Kapital Judul
+      1. Kapital Awal Kalimat
+      2. Kapital Nama Orang
+      3. Kapital Petikan Langsung
+      4. Kapital Gelar
+      5. Kapital Jabatan
+      6. Kapital Tahun, Bulan, Hari
+      7. Kapital Geografi
+      8. Kapital Peristiwa Sejarah
+      9. Kapital Judul
   utter_t_jumlah_hurufabjad:
   - text: Terima kasih atas pertanyannya. Untuk huruf abjad yang dipakai dalam ejaan bahasa Indonesia berjumlah 26 huruf.
   utter_t_jumlah_hurufabjad_kapital:
