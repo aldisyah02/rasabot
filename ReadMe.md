@@ -14,4 +14,5 @@
         <li>Terminal 1 , jalankan perintah 'rasa run actions'</li>
         <li>Terminal 2 , jalankan perintah 'rasa run -m models --enable-api --cors "*"'</li>
         <li>Lalu akses index.html nya</li>
+    </ul>
     
